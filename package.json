@@ -1,0 +1,16 @@
+{
+  "name": "hw-crud",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/*.html",
+    "server": "json-server --watch src/data/students.json port 3010"
+  },
+  "author": "HELP <famzu2018@gmail.com>",
+  "license": "ISC",
+  "description": "-",
+  "devDependencies": {
+    "json-server": "^1.0.0-beta.3",
+    "parcel": "^2.13.3"
+  }
+}
