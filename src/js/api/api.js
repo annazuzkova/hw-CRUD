@@ -38,7 +38,7 @@ export const updateStudent = async (student) => {
 
   try {
     const response = await fetch(url, {
-      method: "PATCH",
+      method: "PUT",
       body: JSON.stringify(student),
     });
     if (!response.ok) {
@@ -53,8 +53,8 @@ export const updateStudent = async (student) => {
   }
 };
 
-export const deleteStudent = async (id) => {
-  const url = `http://localhost:3000/students/${id}`;
+export const deleteStudent = async (student) => {
+  const url = `http://localhost:3000/students/${student.id}`;
 
   try {
     const response = await fetch(url, {
@@ -64,8 +64,8 @@ export const deleteStudent = async (id) => {
       throw new Error(`Виникла помилка при запиті. Статус: ${response.status}`);
     }
 
-    const deletePost = response.json();
-    return deletePost;
+    // const deletePost = response.json();
+    // return deletePost;
   } catch (error) {
     console.error(`Помилка при видаленні студента ${error}`);
     return {};
