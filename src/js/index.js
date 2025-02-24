@@ -60,7 +60,7 @@ const deleteStudentHandler = async (event) => {
     );
 
     await deleteStudent(findDeleteStudent);
-    renderStudents();
+    await renderStudents();
   }
 };
 
@@ -84,7 +84,6 @@ const updateButtonHandler = async (event) => {
       (document.querySelector("#email").value = findUpdateStudent.email);
     submitButton.textContent = "Оновити студента";
     updateId = studentId;
-    console.log(updateId);
   }
 };
 deleteButtons.addEventListener("click", updateButtonHandler);

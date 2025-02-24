@@ -25,7 +25,7 @@ export const addStudent = async (student) => {
       throw new Error(`Виникла помилка при запиті. Статус: ${response.status}`);
     }
 
-    const addStudent = response.json();
+    const addStudent = await response.json();
     return addStudent;
   } catch (error) {
     console.error(`Помилка при додаванні студента ${error}`);
@@ -45,7 +45,7 @@ export const updateStudent = async (student) => {
       throw new Error(`Виникла помилка при запиті. Статус: ${response.status}`);
     }
 
-    const updateStudents = response.json();
+    const updateStudents = await response.json();
     return updateStudents;
   } catch (error) {
     console.error(`Помилка при оновленні студента ${error}`);
